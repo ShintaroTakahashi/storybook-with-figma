@@ -1,44 +1,35 @@
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
-import { Button } from "./Button";
+import { Button } from "../components/templates/TestPage/atoms/Button";
 
 type ButtonStory = ComponentStoryObj<typeof Button>;
 
 export default {
   component: Button,
-  argTypes: {
-    backgroundColor: { control: "color" },
-  },
 } as ComponentMeta<typeof Button>;
 
-export const Primary: ButtonStory = {
-  args: {
-    primary: true,
-    label: "Button",
-  },
+export const Default: ButtonStory = {
   parameters: {
     design: {
       type: "figma",
-      url: "  https://www.figma.com/file/sT1HORnfRSDHOjG2FMi0HA/test_buton",
+      // frameをPage直下に置けば表示可能
+      url: "https://www.figma.com/file/sT1HORnfRSDHOjG2FMi0HA/TestPage?node-id=52%3A51",
     },
   },
-};
-
-export const Secondary: ButtonStory = {
   args: {
-    label: "Button",
+    children: "Button",
   },
 };
 
-export const Large: ButtonStory = {
-  args: {
-    size: "large",
-    label: "Button",
+export const Ghost: ButtonStory = {
+  parameters: {
+    design: {
+      type: "figma",
+      // frameをPage直下に置けば表示可能
+      url: "https://www.figma.com/file/sT1HORnfRSDHOjG2FMi0HA/TestPage?node-id=52%3A42",
+    },
   },
-};
-
-export const Small: ButtonStory = {
   args: {
-    size: "small",
-    label: "Button",
+    ghost: true,
+    children: "Button",
   },
 };

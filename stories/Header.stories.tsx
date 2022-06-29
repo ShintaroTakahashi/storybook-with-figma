@@ -1,22 +1,33 @@
-import { ComponentMeta } from "@storybook/react";
+import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import { Header } from "../components/templates/TestPage/molecules/Header";
 
-import { Header } from "./Header";
+type HeaderStory = ComponentStoryObj<typeof Header>;
 
 export default {
   component: Header,
-  parameters: {
-    layout: "fullscreen",
-  },
 } as ComponentMeta<typeof Header>;
 
-export const LoggedIn = {
-  args: {
-    user: {
-      name: "Jane Doe",
+export const LoggedIn: HeaderStory = {
+  parameters: {
+    design: {
+      type: "figma",
+      // frameをPage直下に置けば表示可能
+      url: "https://www.figma.com/file/sT1HORnfRSDHOjG2FMi0HA/TestPage?node-id=34%3A25",
     },
+  },
+  args: {
+    isLogin: true,
   },
 };
 
-export const LoggedOut = {
+export const LoggedOut: HeaderStory = {
+  parameters: {
+    design: {
+      type: "figma",
+      // frameをPage直下に置けば表示可能
+      url: "https://www.figma.com/file/sT1HORnfRSDHOjG2FMi0HA/TestPage?node-id=52%3A45",
+    },
+  },
+
   args: {},
 };
