@@ -5,5 +5,5 @@ type TitleProps = {
 };
 
 export const Title = styled.h1<TitleProps>`
-  font-size: ${({ size }) => (size === "large" ? "24px" : "18px")};
+  font-size: ${({ size }) => (size === "large" ? "20px" : "16px")};
 `;

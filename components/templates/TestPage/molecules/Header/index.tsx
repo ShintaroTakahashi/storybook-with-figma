@@ -18,17 +18,14 @@ export const Header: FC<HeaderProps> = ({
     <StyledHeader>
       <Title size="large">This is Header </Title>
       {isLogin ? (
-        <ButtonWrapper>
+        <div>
           <span>Welcome!</span>
           <Button onClick={onClickLogout} ghost>
             Logout
           </Button>
-        </ButtonWrapper>
+        </div>
       ) : (
-        <ButtonWrapper>
-          <Button onClick={onClickLogin}>Login</Button>
-          <Button onClick={onClickLogin}>Sign in</Button>
-        </ButtonWrapper>
+        <Button onClick={onClickLogin}>Login</Button>
       )}
     </StyledHeader>
   );
@@ -38,13 +35,6 @@ const StyledHeader = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px;
+  padding: 12px;
   background-color: #ebebeb;
-`;
-
-const ButtonWrapper = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  min-width: 18%;
 `;
