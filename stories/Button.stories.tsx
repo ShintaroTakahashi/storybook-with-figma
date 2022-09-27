@@ -12,7 +12,7 @@ export const Default: ButtonStory = {
     design: {
       type: "figma",
       // frameをPage直下に置けば表示可能
-      url: "https://www.figma.com/file/sT1HORnfRSDHOjG2FMi0HA/TestPage?node-id=52%3A51",
+      url: "https://www.figma.com/file/sT1HORnfRSDHOjG2FMi0HA/TestPage?node-id=217%3A2",
     },
   },
   args: {
@@ -20,16 +20,16 @@ export const Default: ButtonStory = {
   },
 };
 
-export const Ghost: ButtonStory = {
+export const Disabled: ButtonStory = {
   parameters: {
     design: {
       type: "figma",
       // frameをPage直下に置けば表示可能
-      url: "https://www.figma.com/file/sT1HORnfRSDHOjG2FMi0HA/TestPage?node-id=52%3A42",
+      url: "https://www.figma.com/file/sT1HORnfRSDHOjG2FMi0HA/TestPage?node-id=217%3A37",
     },
   },
   args: {
-    ghost: true,
+    disabled: true,
     children: "Button",
   },
 };

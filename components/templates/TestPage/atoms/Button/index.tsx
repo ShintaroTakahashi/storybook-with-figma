@@ -1,16 +1,24 @@
 import styled from "styled-components";
 
-type ButtonProps = {
-  ghost?: boolean; //何かしらパターンを切り替えられるものとする
-};
-
-export const Button = styled.button.attrs<ButtonProps>({
-  type: "button",
-})<ButtonProps>`
-  background-color: ${({ ghost }) => (ghost ? "#ffffff" : "#4fe4e4")};
-  padding: 5px 10px;
-  border: solid 1px ${({ ghost }) => (ghost ? "#000000" : "#ffffff")};
-  border-radius: 15px;
-  font-size: 12px;
+export const Button = styled.button`
+  border-radius: 34px;
+  border: 3px solid transparent;
+  background-image: linear-gradient(#ffffff 0 100%),
+    linear-gradient(93.15deg, #ffe679 0, #ff3333 100%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  box-shadow: 2px 4px 8px rgb(238, 153, 67, 0.3);
+  color: #353535;
+  font-size: 16px;
   font-weight: 700;
+  overflow-wrap: break-word;
+  padding: 0.8rem 30px;
+  width: 200px;
+
+  &:disabled {
+    background-image: linear-gradient(#ffffff 0 100%),
+      linear-gradient(93.15deg, #bdbdbd 0, #949494 100%);
+    opacity: 0.45;
+    pointer-events: none;
+  }
 `;
